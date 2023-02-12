@@ -1,0 +1,18 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+This program is faster then others when using sorted files.
+
+sort2 uses: Merge Sort
+
+How do you know?:
+This program takes less time than others usually.
+This program takes the same amount of time no matter what file i use.
+That is it follows the same steps regardless of the file used.
+
+sort3 uses: Selection Sort
+
+How do you know?:
+This program takes the same amount of time no matter what file i use.
+That is it follows the same steps regardless of the file used.
+But, it's slower than sort2, merge sort.
