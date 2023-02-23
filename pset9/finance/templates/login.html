@@ -8,10 +8,19 @@
     <form action="/login" method="post">
         <div class="form-group">
             <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+            <span class="vazio">
+                &#xaaaa &#xaaaa
+            </span>
         </div>
         <div class="form-group">
-            <input class="form-control" name="password" placeholder="Password" type="password">
+            <input class="form-control password" name="password" placeholder="Password" type="password">
+            <span class="material-symbols-outlined" onclick="olhoLogin()">
+                visibility_off
+            </span>
         </div>
         <button class="btn btn-primary" type="submit">Log In</button>
+        <span class="vazio">
+            &#xaaaa &#xaaaa
+        </span>
     </form>
 {% endblock %}

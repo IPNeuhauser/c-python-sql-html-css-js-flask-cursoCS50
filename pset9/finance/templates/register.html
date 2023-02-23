@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+        <form action="/register" method="post">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" type="text" name="username" placeholder="Username" required>
+                <span class="vazio">
+                    &#xaaaa &#xaaaa
+                </span>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control password" type="password" name="password" id="password" placeholder="Password" minlength="8" required>
+                <span class="material-symbols-outlined" onclick="olhoRegister()">
+                    visibility_off
+                </span>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" class="form-control check" type="password" name="check" placeholder="Password (again)" minlength="8" required>
+                <span class="vazio">
+                    &#xaaaa &#xaaaa
+                </span>
+            </div>
+            <button class="form-control" type="submit">Register</button>
+            <span class="vazio">
+                &#xaaaa &#xaaaa
+            </span>
+        </form>
+{% endblock %}

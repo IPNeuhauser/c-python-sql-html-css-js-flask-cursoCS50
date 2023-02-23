@@ -45,3 +45,29 @@ main img
     /* Constrain images on small screens */
     max-width: 100%;
 }
+
+main table {
+    margin: auto;
+}
+
+main table td {
+    min-width: 150px;
+}
+
+#botao a{
+    color: white;
+}
+
+span.material-symbols-outlined {
+    cursor: pointer;
+}
+
+span.vazio {
+    color: #ffffff;
+}
+
+div.message {
+    background-color: #13678A;
+    color: white;
+    text-align: center;
+}

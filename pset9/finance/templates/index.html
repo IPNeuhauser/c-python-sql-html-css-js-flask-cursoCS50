@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block message %}
+    {% if session['message'] == 'buy' %}
+        <div class="message">
+            Compra foi um sucesso.
+        </div>
+    {% elif session['message'] == 'sold' %}
+        <div class="message">
+            Venda foi um sucesso
+        </div>
+    {% elif session['message'] == 'register' %}
+        <div class="message">
+            Registrado com sucesso
+        </div>
+    {% elif session['message'] == 'password' %}
+        <div class="message">
+            Senha alterada com sucesso
+        </div>
+    {% elif session['message'] == 'login' %}
+        <div class="message">
+            Login efetuado com sucesso
+        </div>
+    {% else %}
+        <div class="message"></div>
+{% endif %}
+
+{% endblock %}
+
+{% block main %}
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </thead>
+            <tbody>
+                {% for dado in dados %}
+                    {% if dado['qntd'] > 0 %}
+                        <tr>
+                            <td>{{dado['symbol']}}</td>
+                            <td>{{dado['name']}}</td>
+                            <td>{{dado['qntd']}}</td>
+                            <td>$ {{dado['price']}}</td>
+                            <td>$ {{dado['price'] * dado['qntd']}}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <th scope="colgroup" colspan="4"></th>
+                <td><strong>$ {{ cash }}</strong></td>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}
